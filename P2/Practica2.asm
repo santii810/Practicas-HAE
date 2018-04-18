@@ -26,10 +26,10 @@ L_main2:
 	SUBWF       _i+0, 0 
 	BTFSC       STATUS+0, 0 
 	GOTO        L_main3
-;Practica2.c,15 :: 		for( j = 0; j<1;j++){
+;Practica2.c,15 :: 		for( j = 0; j<25;j++){
 	CLRF        _j+0 
 L_main5:
-	MOVLW       1
+	MOVLW       25
 	SUBWF       _j+0, 0 
 	BTFSC       STATUS+0, 0 
 	GOTO        L_main6
@@ -67,7 +67,7 @@ L_main8:
 	NOP
 ;Practica2.c,19 :: 		PORTA.B0 = 0;
 	BCF         PORTA+0, 0 
-;Practica2.c,22 :: 		PORTD = numeros[i/10];
+;Practica2.c,21 :: 		PORTD = numeros[i/10];
 	MOVLW       10
 	MOVWF       R4 
 	MOVF        _i+0, 0 
@@ -83,9 +83,9 @@ L_main8:
 	INCF        FSR0H, 1 
 	MOVF        POSTINC0+0, 0 
 	MOVWF       PORTD+0 
-;Practica2.c,24 :: 		PORTA.B1 = 1;
+;Practica2.c,22 :: 		PORTA.B1 = 1;
 	BSF         PORTA+0, 1 
-;Practica2.c,26 :: 		delay_ms(20);
+;Practica2.c,23 :: 		delay_ms(20);
 	MOVLW       52
 	MOVWF       R12, 0
 	MOVLW       241
@@ -97,21 +97,21 @@ L_main9:
 	BRA         L_main9
 	NOP
 	NOP
-;Practica2.c,27 :: 		PORTA.B1 = 0;
+;Practica2.c,24 :: 		PORTA.B1 = 0;
 	BCF         PORTA+0, 1 
-;Practica2.c,15 :: 		for( j = 0; j<1;j++){
+;Practica2.c,15 :: 		for( j = 0; j<25;j++){
 	INCF        _j+0, 1 
-;Practica2.c,28 :: 		}
+;Practica2.c,25 :: 		}
 	GOTO        L_main5
 L_main6:
 ;Practica2.c,14 :: 		for(i = 0; i< 60; i++){
 	INCF        _i+0, 1 
-;Practica2.c,29 :: 		}
+;Practica2.c,26 :: 		}
 	GOTO        L_main2
 L_main3:
-;Practica2.c,30 :: 		}
+;Practica2.c,27 :: 		}
 	GOTO        L_main0
-;Practica2.c,31 :: 		}
+;Practica2.c,28 :: 		}
 L_end_main:
 	GOTO        $+0
 ; end of _main
