@@ -61,7 +61,11 @@ void main() {
     Lcd_Init();
     PIR1.ADIF =0;
     PIE1.ADIE = 1; // habilita la interrupcion del convertidor A/D
+<<<<<<< HEAD
     TRISB = 0xFF;
+=======
+    TRISB = 0xFF; //Todo input
+>>>>>>> 5d0d6e7e88c6cd26a50519db888f46dc6c35173e
 
     //Configuracion convertidor A/D
     ADCON0 = 0x71;

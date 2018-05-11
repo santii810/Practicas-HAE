@@ -13,17 +13,14 @@ void main() {
  while(1){
 
  for(i = 0; i< 60; i++){
- for( j = 0; j<1;j++){
+ for( j = 0; j<25;j++){
  PORTD = numeros[i%10];
  PORTA.B0 = 1;
  delay_ms(20);
  PORTA.B0 = 0;
 
-
  PORTD = numeros[i/10];
-
  PORTA.B1 = 1;
-
  delay_ms(20);
  PORTA.B1 = 0;
  }

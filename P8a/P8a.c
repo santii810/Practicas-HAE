@@ -40,9 +40,21 @@ void interrupt(){
         representar();
 
     }
+<<<<<<< HEAD
 
     if(INTCON3.INT1IF){
           escala = escala%8;
+=======
+    if(INTCON.TMR0IF){        //interrupcion provocada por el timer
+        INTCON.TMR0IF = 0;
+        ADCON0.GO = 1;        //Hace que empiece la conversion
+        //reiniciamos el valor de alfa con el timer ya configurado
+        TMR0H = (18660>>8);   //1.5 seg
+        TMR0L = 18660;
+    }
+    if(INTCON3.INT1IF){
+          escala = escala%3;
+>>>>>>> 5d0d6e7e88c6cd26a50519db888f46dc6c35173e
           escala++;
           representar();
           INTCON3.INT1IF = 0;
@@ -51,6 +63,7 @@ void interrupt(){
 }
 
 void main() {
+<<<<<<< HEAD
     TRISE.B0 = 1;
     TRISB = 0xFF;
     
@@ -58,12 +71,29 @@ void main() {
     PIR1.ADIF =0;
     PIE1.ADIE = 1; // habilita la interrupcion del convertidor A/D
 
+=======
+    TRISE.B1 = 1;
+    Lcd_Init();
+    PIR1.ADIF =0;
+    PIE1.ADIE = 1; // habilita la interrupcion del convertidor A/D
+    TRISB = 0xFF;
+>>>>>>> 5d0d6e7e88c6cd26a50519db888f46dc6c35173e
 
     //Configuracion convertidor A/D
     ADCON0 = 0x71;
     ADCON1 = 0xCE;
     INTCON.PEIE = 1;
 
+<<<<<<< HEAD
+=======
+    //INTERRUPCION DEL TIMER
+    INTCON.TMR0IF = 0;
+    INTCON.TMR0IE = 1;
+    T0CON = 0x85;     //configuramos el timer y lanzamos una primera temporizacion
+    TMR0H = (18660>>8);   //1.5 seg
+    TMR0L = 18660;
+
+>>>>>>> 5d0d6e7e88c6cd26a50519db888f46dc6c35173e
 
     //INTERRUPCION DEL PULSADOR
     INTCON2.INTEDG1 = 0;       //Flanco de subida o *bajada*
