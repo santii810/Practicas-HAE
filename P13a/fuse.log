@@ -1,0 +1,21 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o D:/P13a/tb_isim_beh.exe -prj D:/P13a/tb_beh.prj work.tb 
+ISim O.61xd (signature 0x6dd86d03)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/P13a/P13a.vhd" into library work
+Parsing VHDL file "D:/P13a/tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 59840 KB
+Fuse CPU Usage: 93 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity P13a [p13a_default]
+Compiling architecture behavior of entity tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable D:/P13a/tb_isim_beh.exe
+Fuse Memory Usage: 68676 KB
+Fuse CPU Usage: 140 ms

@@ -1,0 +1,40 @@
+Release 13.2 - xst O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/p13d/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to D:/p13d/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/p13d/p13d.vhd" in Library work.
+Entity <p13d> compiled.
+ERROR:HDLParsers:3312 - "D:/p13d/p13d.vhd" Line 15. Undefined symbol 'unsigned'.
+ERROR:HDLParsers:1209 - "D:/p13d/p13d.vhd" Line 15. unsigned: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "D:/p13d/p13d.vhd" Line 18. Undefined symbol 'temp'.
+ERROR:HDLParsers:1209 - "D:/p13d/p13d.vhd" Line 21. temp: Undefined symbol (last report in this block)
+ERROR:HDLParsers:164 - "D:/p13d/p13d.vhd" Line 23. parse error, unexpected ELSIF, expecting SEMICOLON
+ERROR:HDLParsers:164 - "D:/p13d/p13d.vhd" Line 29. parse error, unexpected IDENTIFIER, expecting IF
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+
+Total memory usage is 121908 kilobytes
+
+Number of errors   :    6 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

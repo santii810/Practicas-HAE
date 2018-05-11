@@ -1,0 +1,6 @@
+main
+	__CC2DW
+	SPI1_Init
+interrupt
+	convertir
+		SPI1_Write
